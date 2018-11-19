@@ -1,0 +1,57 @@
+{#
+  Partial Parameters:
+
+  checkoutMode: true/false
+  hideCouponCode: true/false
+  order: if given, will show items from the order instead of from the cart
+#}
+
+{# Can't pass in params when reloading partial, so check if current page is checkout. #}
+{% if page.url == '/checkout' %}
+  {% set checkoutMode = true %}
+{% endif %}
+
+{% set hasOrder =  order is defined %}
+{% set hasOrderItems = hasOrder and order.hasItems() %}
+{% set hasItems =  items | length > 0 %}
+{% set hasUpcomingItems =  upcomingItems | length > 0 %}
+
+{{ open_form({
+     'class': 'grid-x grid-padding-x',
+     'data-ajax-handler': 'shop:cart',
+     'data-ajax-update': checkoutMode
+        ? '.cart-contents=cart-contents,.checkout-totals=checkout-totals,.cart-count=cart-count,.mini-cart=mini-cart'
+        : '.cart-page=cart-page,.cart-count=cart-count,.mini-cart=mini-cart'
+   })
+}}
+  {% if hasOrderItems %}
+    {{ partial('cart-contents-items', {items: order.items, checkoutMode: checkoutMode }) }}
+  {% endif %}
+
+  {% if hasUpcomingItems %}
+    {{ partial('cart-contents-items', { listTitle: 'Upcoming subscription items', items: upcomingItems, checkoutMode: checkoutMode }) }}
+  {% endif %}
+
+  {% if hasItems  %}
+    {{ partial('cart-contents-items', { listTitle: 'Items shipping immediately', items: items, checkoutMode: checkoutMode }) }}
+  {% endif %}
+
+  {% if hasItems or hasUpcomingItems %}
+  <hr/>
+  <section class="cell cart-summary">
+      <div class="grid-x grid-padding-x">
+      <div class="cell large-8">
+          &nbsp;
+        </div>
+      <div class="cell large-4 large-order-2 checkout-totals">
+        {% if upcomingTotals %}
+            {{ partial('checkout-totals', { totalTitle: 'Total (shipping immediately)',  totals: totals, checkoutMode: checkoutMode } ) }}
+            {{ partial('checkout-totals', { totalTitle: 'Total (upcoming subscription items)', totals: upcomingTotals, checkoutMode: checkoutMode, hideCouponCode: true} ) }}
+        {% else %}
+          {{ partial('checkout-totals', { totals: totals, checkoutMode: checkoutMode } ) }}
+        {% endif %}
+      </div>
+    </div>
+  </section>
+  {% endif %}
+{{ close_form() }}
