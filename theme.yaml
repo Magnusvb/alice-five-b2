@@ -4,7 +4,7 @@ engine: twig
 404: 404
 customFields:
     storeTitle: { type: text, title: 'Store Name', default: 'This Shop' }
-    storeLogo: { type: image, title: 'Store Logo', default: '@images/dist/bones-logo.svg' }
+    storeLogo: { type: image, title: 'Store Logo', default: '@images/dist/niqopods-logo.svg' }
     footerLegalText: { type: text, title: 'Footer Legal Text', default: '© 2017 LemonStand eCommerce Inc.' }
     facebookLink: { type: text, title: 'Facebook Social Account Link', default: '' }
     twitterLink: { type: text, title: 'Twitter Social Account Link', default: '' }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="303px" height="100px" viewBox="0 0 303 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.5 (67469) - http://www.bohemiancoding.com/sketch -->
+    <title>Desktop</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Path" fill="#00CD77" points="118 52.1539369 134.617615 69 267 69 267 65.0463973 144.406147 65.0463973 122.811122 44 118.848561 47.9599921"></polygon>
+        <text id="NIQO" fill="#00A2B5" font-family="Carbon-Bold, Carbon" font-size="96" font-weight="bold" letter-spacing="-6.60000014">
+            <tspan x="-5" y="58">NIQ</tspan>
+            <tspan x="133.312" y="58">O</tspan>
+        </text>
+        <text id="PODS" fill="#000000" font-family="Carbon-Regular, Carbon" font-size="96" font-weight="normal" letter-spacing="-11.7000003">
+            <tspan x="127" y="97">POD</tspan>
+            <tspan x="255.099999" y="97">S</tspan>
+        </text>
+    </g>
+</svg>
