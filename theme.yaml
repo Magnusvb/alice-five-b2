@@ -18,6 +18,7 @@ customFields:
     enableCartUpsells: { type: checkbox, title: 'Cart Page - Show upsells', default: true }
     enableHomeBlogPreview: { type: checkbox, title: 'Home Page - Show latest blog posts', default: true }
     enableHomeAbout: { type: checkbox, title: 'Home Page- Show widget block home-about', default: true }
+    enableHomeSale: { type: checkbox, title: 'Home Page- Show products on sale', default: false }
     enableHomeHero: { type: checkbox, title: 'Home Page - Show hero image with home-hero-content widget block centered within it', default: true }
     homeHeroImage: { type: image, title: 'Home Page - Hero Image', default: 'https://placehold.it/1200x400' }
     autoSubmitOnlyShippingMethod: { type: checkbox, title: 'Checkout Page - Auto-submit shipping option if there is only one option', default: true}
