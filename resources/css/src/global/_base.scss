@@ -1,7 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   background-color: #fff;
 }
 
 p {
   font-size: 1.1rem;
+}
+
+h1 {
+  font-family: metropolis-bold;
+  font-size: 4rem;
+  line-height: 1;
 }
