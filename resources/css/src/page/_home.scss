@@ -15,4 +15,19 @@
   width: 70%;
   margin: 0 auto;
   max-width: 50rem;
+  
+  p {
+    padding: 0 5rem;
+  }
+}
+
+.home-categories-container {
+  margin-top: 2rem;
+  background: linear-gradient(45deg, white, rgba(235, 240, 245, 1.00));
+}
+
+@supports (display: grid) {
+  .home-categories-container {
+    
+  }
 }

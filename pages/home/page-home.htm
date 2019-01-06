@@ -17,9 +17,9 @@ published: true
   {% endif %}
   </div>
 
-  <main class="grid-container">
+  <main class="grid-container home-categories-container">
   <section>
-    <h5>Categories</h5>
+{#     <h5>Categories</h5> #}
       {{ partial('category-list', {categories: categories}) }}
   </section>
 
@@ -59,7 +59,7 @@ published: true
   </section>
 {% endif %}
 
-    {% if theme.enableHomeAbout %}
+  {% if theme.enableHomeAbout %}
     <section>
       {{ content_block('home-about') }}
     </section>
