@@ -4,14 +4,38 @@
 
 // Page header with logo and menu
 header {
-  border: 1px solid lime;
+//   border: 1px solid lime;
 }
 
 .header-inner {
   border: 1px solid pink;
-  margin: 2rem;
+  margin: 1rem 3rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 3rem;
 }
 
 .logo {
+  width: 15rem;
+}
+
+.header-search {
   
+}
+
+.account-links {
+  
+}
+
+nav {
+  border-top: 1px solid blue;
+  
+  .main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
 }

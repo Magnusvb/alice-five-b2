@@ -135,6 +135,8 @@ gulp.task('images', (callback) => {
 gulp.task('fonts', (callback) => {
   return gulp.src('node_modules/font-awesome/fonts/*')
       .pipe(gulp.dest('resources/fonts/dist'));
+  return gulp.src('resources/fonts/src/*')
+      .pipe(gulp.dest('resources/fonts/dist'));
 });
 
 function htmlLintReporter(path, issues) {

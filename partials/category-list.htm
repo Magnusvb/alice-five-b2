@@ -3,11 +3,24 @@ description: Displays a list of categories.
 ---
 {# params: categories #}
 <div data-equalizer="category-images" data-equalize-by-row="true">
-  <div class="category-list grid-x grid-margin-x small-up-2 medium-up-3 large-up-3"
+  <div class="category-list grid-x zgrid-margin-x small-up-2 medium-up-3 large-up-3"
        data-equalizer="category-name" data-equalize-by-row="true">
 
     {% for category in categories %}
+    <div class="category-item">
+    <a href="/category/{{ category.url_name }}">
+      <img
+        src="{{ category.images.first.thumbnail(535, 'auto')
+      | default('http://placehold.it/535x535') }}"
+        alt="{{ category.images.first.description }}"
+        title="{{ category.images.first.description }}"/>
+        <section class="" data-equalizer-watch="category-name">
+          <h4>{{ category.name }}</h4>
+        </section>
+      </a>
+    </div>
 
+{#
       <div class="cell" {% if loop.last %}data-equalizer-singleton-row-height-fix{% endif %}>
         <a href="/category/{{ category.url_name }}">
           <div class="card" >
@@ -29,6 +42,7 @@ description: Displays a list of categories.
           </div>
         </a>
       </div>
+#}
 
     {% endfor %}
 
