@@ -10,12 +10,12 @@ description: Displays a list of categories.
     <div class="category-item">
     <a href="/category/{{ category.url_name }}">
       <img
-        src="{{ category.images.first.thumbnail(535, 'auto')
+        src="{{ category.images.first.thumbnail('auto')
       | default('http://placehold.it/535x535') }}"
         alt="{{ category.images.first.description }}"
         title="{{ category.images.first.description }}"/>
-        <section class="" data-equalizer-watch="category-name">
-          <h4>{{ category.name }}</h4>
+        <section class="category-list-name" data-equalizer-watch="category-name">
+          <h3>{{ category.name }}</h3>
         </section>
       </a>
     </div>

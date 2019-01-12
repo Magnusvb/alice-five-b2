@@ -52,13 +52,13 @@
 </div>
 
 <nav>
-  <div class="">
+  <div class="main-navigation">
     <ul class="main-menu" data-dropdown-menu>
-      <li>
+      <li class="main-menu-item">
         <a href="/">Home</a>
       </li>
       {% for category in categories %}
-      <li>
+      <li class="main-menu-item">
         <a href="/category/{{ category.url_name }}">{{ category.name }}</a>
       </li>
       {% endfor %}

@@ -15,8 +15,13 @@ img {
   height: auto;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: solid 1px $color-secondary_2;
+}
+
 p {
-  font-size: 1.1rem;
+  font-size: $size-base;
 }
 
 h1 {
@@ -24,6 +29,40 @@ h1 {
   //font-weight: 700;
   //font-style: normal;
   font-family: $header-font-family;
-  font-size: 3rem;
+  font-size: $size-xlarge;
   line-height: 1;
+}
+
+h2 {
+  font-family: $header-font-family;
+  font-size: $size-large;
+  line-height: 1;
+}
+
+h3 {
+  font-family: $header-font-family;
+  font-size: $size-medium;
+  line-height: 1;
+}
+
+h4 {
+  font-family: $header-font-family;
+  font-size: $size-base;
+  line-height: 1;
+}
+
+h5 {
+  font-family: $header-font-family;
+  font-size: $size-small;
+  line-height: 1;
+}
+
+h6 {
+  font-family: $header-font-family;
+  font-size: $size-xsmall;
+  line-height: 1;
+}
+
+.input-component {
+  
 }

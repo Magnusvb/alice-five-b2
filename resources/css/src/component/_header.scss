@@ -78,3 +78,57 @@
     }
   }
 }
+
+// Page header with logo and menu
+.header-content {
+  border: aqua solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1rem 3rem;
+  
+  a {
+    border: none;
+    color: $text-dark;
+  }
+  
+  @media screen and (min-width: $screen-medium) {
+    flex-direction: row;
+  }
+}
+
+.logo {
+  width: 15rem;
+  border: solid fuchsia 1px;
+}
+
+.header-search {
+  border: 1px solid red;  
+}
+
+.account-links {
+  border: 1px solid lime;
+}
+
+nav {
+  border-top: 1px solid $color-secondary_2;
+  a {
+    border: none;
+    color: $text-dark;
+  }
+  
+  .main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-direction: column;
+    
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+    }
+  }
+}
+
+.main-menu-item {
+  margin: 0 $size-medium;
+}

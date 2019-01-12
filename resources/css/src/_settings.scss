@@ -1,0 +1,27 @@
+$color-primary: #3b4696; // Dark blue
+$color-secondary_1: #7097ac; // Medium blue
+$color-secondary_2: #c8d7e5; // light blue grey
+$color-accent: #ffb616; // Orange
+$color-body: #ffffff;
+$thirdcolor: rgba(235, 240, 245, 1.00); // Very light blue grey
+
+$soft-shadow: 0px 2px 10px 6px rgba(0,0,0,.2);
+
+$text-dark: hsla(195, 9%, 22%, 0.90);
+$text-medium: hsla(0, 0%, 13%, 0.54);
+$text-light: hsla(0, 0%, 100%, 0.9);
+
+// Size system
+$size-base: 1rem;
+$size-small: 0.75rem;
+$size-xsmall: 0.5rem;
+$size-medium: 1.5rem;
+$size-large: 2rem;
+$size-xlarge: 3rem;
+
+// Media query
+$screen-small: 33em; // 528px
+$screen-medium: 43.75em; // 700px
+$screen-big: 55em; // 880px
+$screen-large: 61.875em; // 990px
+$screen-widescreen: 80em; // 1400px
