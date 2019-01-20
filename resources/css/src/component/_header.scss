@@ -81,11 +81,11 @@
 
 // Page header with logo and menu
 .header-content {
-  border: aqua solid 1px;
+//   border: aqua solid 1px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  margin: 1rem 3rem;
+  margin: 1rem 1rem;
+  align-items: center;
   
   a {
     border: none;
@@ -94,26 +94,56 @@
   
   @media screen and (min-width: $screen-medium) {
     flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 4rem;
+//     align-items: flex-start;
   }
 }
 
 .logo {
-  width: 15rem;
-  border: solid fuchsia 1px;
+  min-width: 10rem;
+  max-width: 14rem;
+  flex: 1 1 auto;
+//   border: solid fuchsia 1px;
+  margin-bottom: $size-medium;
+  
+  @media screen and (min-width: $screen-medium) {
+    margin-right: 2rem;
+  }
 }
 
 .header-search {
-  border: 1px solid red;  
+  flex: 1 1 auto;
+//   border: 1px solid red;
+  margin-bottom: $size-medium;
+  max-width: 100%;
+  
+  @media screen and (min-width: $screen-medium) {
+    margin-left: auto;
+  }
 }
 
 .account-links {
-  border: 1px solid lime;
+//   border: 1px solid lime;
+  
+  @media screen and (min-width: $screen-medium) {
+    margin-left: 2rem;
+  }
+  
+  .header-account-nav {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 nav {
-  border-top: 1px solid $color-secondary_2;
+  border-top: 1px solid $neutral-medium;
   a {
     border: none;
+    color: $text-dark;
+  }
+  
+  a:visited {
     color: $text-dark;
   }
   

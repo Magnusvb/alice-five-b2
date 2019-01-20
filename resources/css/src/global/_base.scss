@@ -17,7 +17,12 @@ img {
 
 a {
   text-decoration: none;
-  border-bottom: solid 1px $color-secondary_2;
+  color: $text-links;
+  border-bottom: solid 1px $text-links-light;
+  
+  &:visited {
+    color: $text-links-light;
+  }
 }
 
 p {
@@ -25,12 +30,13 @@ p {
 }
 
 h1 {
-  //font-family: proxima-nova, sans-serif;
-  //font-weight: 700;
-  //font-style: normal;
   font-family: $header-font-family;
-  font-size: $size-xlarge;
+  font-size: $size-large;
   line-height: 1;
+  
+  @media screen and (min-width: $screen-medium) {
+    font-size: $size-xlarge;
+  }
 }
 
 h2 {
@@ -40,7 +46,7 @@ h2 {
 }
 
 h3 {
-  font-family: $header-font-family;
+  font-family: $body-font-family;
   font-size: $size-medium;
   line-height: 1;
 }
@@ -63,6 +69,48 @@ h6 {
   line-height: 1;
 }
 
+// Text field with button
 .input-component {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 0.2rem;
   
+  @media screen and (min-width: $screen-medium) {
+    justify-content: flex-end;
+
+  }
+  
+  button {
+    background-color: $primarybutton;
+    border: 0;
+    padding: 0.4rem 0.8rem;
+    font-size: 1.2rem;
+    font-variant: small-caps;
+    letter-spacing: 2px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  input {
+    border: 0;
+    background-color: $neutral-superlight;
+    border-radius: 3px 0 0 3px;
+    flex: 0 1 200px;
+    font-size: 1.3rem;
+    min-width: 0px;
+    padding: 0.6rem;
+  }
+  
+  .icon-search {
+    width: 30px;
+    height: auto;
+    
+    .primary {
+      fill: $primarybutton;
+    }
+    
+    .secondary {
+      fill: $supporting-1;
+    }
+  }
 }

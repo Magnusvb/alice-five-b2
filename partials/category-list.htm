@@ -5,7 +5,6 @@ description: Displays a list of categories.
 <div data-equalizer="category-images" data-equalize-by-row="true">
   <div class="category-list grid-x zgrid-margin-x small-up-2 medium-up-3 large-up-3"
        data-equalizer="category-name" data-equalize-by-row="true">
-
     {% for category in categories %}
     <div class="category-item">
     <a href="/category/{{ category.url_name }}">
@@ -20,8 +19,8 @@ description: Displays a list of categories.
       </a>
     </div>
 
-{#
-      <div class="cell" {% if loop.last %}data-equalizer-singleton-row-height-fix{% endif %}>
+      <!-- 
+<div class="cell" {% if loop.last %}data-equalizer-singleton-row-height-fix{% endif %}>
         <a href="/category/{{ category.url_name }}">
           <div class="card" >
 
@@ -42,7 +41,7 @@ description: Displays a list of categories.
           </div>
         </a>
       </div>
-#}
+ -->
 
     {% endfor %}
 
