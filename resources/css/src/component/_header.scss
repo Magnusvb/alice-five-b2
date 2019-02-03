@@ -1,8 +1,8 @@
 .header-inner {
-  background: $white;
-  padding: 1rem 0 .5rem;
-  border-bottom: 1px solid #999;
-  box-shadow: 0px 0px 8px 8px rgba(0,0,0,.05);
+  //background: $white;
+  //padding: 1rem 0 .5rem;
+  //border-bottom: 1px solid #999;
+  //box-shadow: 0px 0px 8px 8px rgba(0,0,0,.05);
 
   .header-title {
     // Internet Explorer hack.
@@ -14,7 +14,7 @@
     // sass-lint:enable no-vendor-prefixes
 
     .header-logo {
-      height: 3rem;
+      //height: 3rem;
     }
   }
 
@@ -77,4 +77,110 @@
       }
     }
   }
+}
+
+// Page header with logo and menu
+.header-content {
+//   border: aqua solid 1px;
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 1rem;
+  align-items: center;
+  
+  a {
+    border: none;
+    color: $text-dark;
+  }
+  
+  @media screen and (min-width: $screen-medium) {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem 4rem;
+//     align-items: flex-start;
+  }
+}
+
+.logo {
+  min-width: 12rem;
+  max-width: 14rem;
+  flex: 1 1 auto;
+//   border: solid fuchsia 1px;
+  margin-bottom: $size-medium;
+  
+  @media screen and (min-width: $screen-medium) {
+    margin-right: 2rem;
+  }
+}
+
+.header-search {
+  flex: 1 1 auto;
+//   border: 1px solid red;
+  margin-bottom: $size-medium;
+  max-width: 100%;
+  
+  @media screen and (min-width: $screen-medium) {
+    margin-left: auto;
+  }
+}
+
+.account-links {
+//   border: 1px solid lime;
+  
+  @media screen and (min-width: $screen-medium) {
+    margin-left: 2rem;
+  }
+  
+  .header-account-nav {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+nav {
+  border-top: 1px solid $neutral-medium;
+  a {
+    border: none;
+    color: $text-dark;
+  }
+  
+  a:visited {
+    color: $text-dark;
+  }
+  
+  .main-menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-direction: column;
+    margin-top: 0;
+    
+    @media screen and (min-width: $screen-medium) {
+      flex-direction: row;
+    }
+  }
+}
+
+.main-navigation {
+  margin-top: 0;
+}
+
+.main-menu-item {
+  line-height: 3;
+  text-align: center;
+  border-bottom: 1px solid $neutral-light;
+  padding: 0 5px;
+  a {
+    display: block;
+  }
+  
+  @media screen and (min-width: $screen-medium) {
+	  margin: 0 $size-medium;
+	  line-height: 1.8;
+	  text-align: left;
+	  border: 0;
+  }
+}
+
+.active {
+  background-color: $neutral-light;
 }
