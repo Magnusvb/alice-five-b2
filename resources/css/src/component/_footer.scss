@@ -1,6 +1,7 @@
 .page-footer {
-  background: $light-gray;
-  padding: 1rem 0;
+  // background: $neutral-light;
+  border-top: 1px solid $neutral-light;
+  padding: 1rem 2rem;
 
   .footer-custom-nav {
     margin: 0 5rem 1rem 0;
@@ -50,5 +51,20 @@
         justify-content: center;
       }
     }
+  }
+}
+
+.footer-content {
+  // border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  a {
+    border-bottom: none;
+  }
+
+  @media screen and (min-width: $screen-small) {
+    flex-direction: row;
   }
 }

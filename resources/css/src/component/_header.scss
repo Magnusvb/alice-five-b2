@@ -95,8 +95,10 @@
   @media screen and (min-width: $screen-medium) {
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  @media screen and (min-width: $screen-large) {
     margin: 1rem 4rem;
-//     align-items: flex-start;
   }
 }
 
