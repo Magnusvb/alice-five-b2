@@ -101,7 +101,7 @@
 }
 
 .logo {
-  min-width: 10rem;
+  min-width: 12rem;
   max-width: 14rem;
   flex: 1 1 auto;
 //   border: solid fuchsia 1px;
@@ -152,6 +152,7 @@ nav {
     justify-content: center;
     list-style: none;
     flex-direction: column;
+    margin-top: 0;
     
     @media screen and (min-width: $screen-medium) {
       flex-direction: row;
@@ -159,6 +160,27 @@ nav {
   }
 }
 
+.main-navigation {
+  margin-top: 0;
+}
+
 .main-menu-item {
-  margin: 0 $size-medium;
+  line-height: 3;
+  text-align: center;
+  border-bottom: 1px solid $neutral-light;
+  padding: 0 5px;
+  a {
+    display: block;
+  }
+  
+  @media screen and (min-width: $screen-medium) {
+	  margin: 0 $size-medium;
+	  line-height: 1.8;
+	  text-align: left;
+	  border: 0;
+  }
+}
+
+.active {
+  background-color: $neutral-light;
 }

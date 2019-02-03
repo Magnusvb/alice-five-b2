@@ -36,7 +36,7 @@
 {% endif %}
 
   </head>
-  <body class="{% if theme.fillWindow %}fill-window{% endif %} {{ page.name | lower }}">
+  <body class="{{ category.name }}{% if theme.fillWindow %}fill-window{% endif %} {{ page.name | lower }}">
     <nav class="off-canvas position-left is-closed" id="mobile-off-canvas-menu" data-off-canvas>
       {{ partial('mobile-off-canvas-menu') }}
     </nav>

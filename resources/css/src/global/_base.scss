@@ -69,6 +69,11 @@ h6 {
   line-height: 1;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
 // Text field with button
 .input-component {
   max-width: 100%;
@@ -100,17 +105,31 @@ h6 {
     min-width: 0px;
     padding: 0.6rem;
   }
+}
+
+.icon-search,
+.icon-shopping-cart {
+  width: 30px;
+  height: auto;
   
-  .icon-search {
-    width: 30px;
-    height: auto;
-    
-    .primary {
-      fill: $primarybutton;
-    }
-    
-    .secondary {
-      fill: $supporting-1;
-    }
+  .primary {
+    fill: $primarybutton;
+  }
+  
+  .secondary {
+    fill: $neutral-dark;
+  }
+}
+
+.icon-shopping-cart {
+  width: 20px;
+  height: auto;
+
+  .primary {
+    fill: $neutral-light;
+  }
+
+  .secondary {
+    fill: $neutral-medium;
   }
 }
