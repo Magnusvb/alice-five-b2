@@ -4,6 +4,8 @@ html, body {
   padding: 0;
   font-family: $body-font-family;
   font-style: normal;
+  display: flex;
+  flex-direction: column;
 }
 
 body {

@@ -11,9 +11,9 @@ published: true
     <h1>{{ category.name }}</h1>
   </header>
 
-  <div class="grid-x">
+  <div class="xgrid-x wrapper-category">
 
-    <nav class="category-sidenav cell medium-3">
+    <!-- <nav class="category-sidenav cell medium-3">
       <h4>Categories</h4>
       {% tree categories %}
         <ul
@@ -35,9 +35,9 @@ published: true
           {% endfor %}
         </ul>
       {% endtree %}
-    </nav>
+    </nav> -->
 
-    <section class="category-products medium-9">
+    <section class="category-products xmedium-9">
       {% paginate products by 48 %}
         {{ partial('product-list', { products: pagination.items, showSort: true }) }}
         <div class="pagination-centered">
@@ -46,6 +46,10 @@ published: true
           </div>
         </div>
       {% endpaginate %}
+    </section>
+
+    <section class="category-desc">
+      <p>{{ category.description|unescape }}</p>
     </section>
 
   </div>
