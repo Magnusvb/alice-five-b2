@@ -6,7 +6,7 @@ action: shop:category
 template: default
 published: true
 ---
-<section class="category grid-container">
+<section class="page-category grid-container">
   <header>
     <h1>{{ category.name }}</h1>
   </header>
@@ -39,7 +39,7 @@ published: true
 
     <section class="category-products xmedium-9">
       {% paginate products by 48 %}
-        {{ partial('product-list', { products: pagination.items, showSort: true }) }}
+        {{ partial('product-list', { products: pagination.items, showSort: false }) }}
         <div class="pagination-centered">
           <div class="pagination">
             {% navigation %}

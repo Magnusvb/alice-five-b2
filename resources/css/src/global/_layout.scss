@@ -1,5 +1,5 @@
 .grid-container {
-	// border: 1px solid pink;
+	border: 1px solid pink;
 	min-height: 100%;
   padding: 0;
 }
@@ -17,22 +17,32 @@ footer {
 }
 
 .wrapper-category {
-	// border: 1px solid blue;
-	display: flex;
-	flex-direction: column;
-	padding: 0 1rem;
+  border: 1px solid lime;
+  display: flex;
+  flex-direction: column;
 
-	.category-products {
-		flex: 1 1 70%;
-		// border: 1px solid silver;
-		margin-right: 2rem;
-	}
+  .category-products {
+  	flex: 1 1 70%;
+  }
 
-	.category-desc {
-		flex: 1 1 30%;
-	}
+  .category-desc {
+  	flex: 1 1 30%;
+  	margin-top: 3rem;
+  }
+  
+    @media screen and (min-width: $screen-large) {
+    	flex-direction: row;
+	  	margin-left: 1.6rem;
+    	margin-top: 0;
+    }
+  } 
 
-	@media screen and (min-width: $screen-large) {
-		flex-direction: row;
-	}
+.page-category,
+.page-product {
+  border: 1px solid red;
+  margin: 0 1rem;
+    
+  @media screen and (min-width: $screen-large) {
+    margin: 0 2rem;
+  }
 }
