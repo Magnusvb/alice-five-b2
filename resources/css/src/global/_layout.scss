@@ -1,5 +1,5 @@
 .grid-container {
-	border: 1px solid pink;
+// 	border: 1px solid pink;
 	min-height: 100%;
   padding: 0;
 }
@@ -17,7 +17,6 @@ footer {
 }
 
 .wrapper-category {
-  border: 1px solid lime;
   display: flex;
   flex-direction: column;
 
@@ -28,21 +27,54 @@ footer {
   .category-desc {
   	flex: 1 1 30%;
   	margin-top: 3rem;
+  	
+  	@media screen and (min-width: $screen-small) {
+      width: 60%;
+      margin: auto;
+    }
+  	
+  	@media screen and (min-width: $screen-large) {
+    	margin: 0 1rem 0 1rem;
+    	width: 100%;
+//     	border-left: 1px solid $neutral-light;
+  	}
   }
   
-    @media screen and (min-width: $screen-large) {
-    	flex-direction: row;
-	  	margin-left: 1.6rem;
-    	margin-top: 0;
-    }
-  } 
+  @media screen and (min-width: $screen-large) {
+  	flex-direction: row;
+  }
+} 
 
 .page-category,
 .page-product {
-  border: 1px solid red;
-  margin: 0 1rem;
+  padding: 0 1rem;
     
   @media screen and (min-width: $screen-large) {
     margin: 0 2rem;
+  }
+}
+
+.category-title {
+  text-align: center;
+}
+
+.product-list {
+//  border: 1px solid lime;
+ display: flex;
+ flex-wrap: wrap;
+ padding: 1rem;
+}
+
+.product-cell {
+//   border: 1px solid fuchsia;
+  flex: 1 1 auto;
+  padding: 0.4rem 0.4rem;
+  
+  @media screen and (min-width: $screen-small) {
+    flex: 0 1 50%;
+  }
+  
+  @media screen and (min-width: $screen-big) {
+    flex: 0 1 33%;
   }
 }
