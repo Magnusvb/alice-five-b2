@@ -173,6 +173,9 @@ nav {
   padding: 0 5px;
   a {
     display: block;
+    &:hover {
+      background-color: $neutral-light;
+    }
   }
   
   @media screen and (min-width: $screen-medium) {

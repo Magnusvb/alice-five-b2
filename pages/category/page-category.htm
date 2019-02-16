@@ -6,14 +6,14 @@ action: shop:category
 template: default
 published: true
 ---
-<section class="category grid-container">
-  <header>
+<section class="grid-container">
+  <header class="category-title">
     <h1>{{ category.name }}</h1>
   </header>
 
-  <div class="grid-x">
+  <div class="xgrid-x wrapper-category">
 
-    <nav class="category-sidenav cell medium-3">
+    <!-- <nav class="category-sidenav cell medium-3">
       <h4>Categories</h4>
       {% tree categories %}
         <ul
@@ -35,17 +35,21 @@ published: true
           {% endfor %}
         </ul>
       {% endtree %}
-    </nav>
+    </nav> -->
 
-    <section class="category-products medium-9">
+    <section class="category-products xmedium-9">
       {% paginate products by 48 %}
-        {{ partial('product-list', { products: pagination.items, showSort: true }) }}
+        {{ partial('product-list', { products: pagination.items, showSort: false }) }}
         <div class="pagination-centered">
           <div class="pagination">
             {% navigation %}
           </div>
         </div>
       {% endpaginate %}
+    </section>
+
+    <section class="category-desc">
+      <p>{{ category.description|unescape }}</p>
     </section>
 
   </div>
