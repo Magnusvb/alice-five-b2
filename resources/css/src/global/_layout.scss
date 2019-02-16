@@ -69,6 +69,12 @@ footer {
 //   border: 1px solid fuchsia;
   flex: 1 1 auto;
   padding: 0.4rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  
+  a {
+    border-bottom: 0;
+  }
   
   @media screen and (min-width: $screen-small) {
     flex: 0 1 50%;
@@ -76,5 +82,22 @@ footer {
   
   @media screen and (min-width: $screen-big) {
     flex: 0 1 33%;
+  }
+}
+
+.product-card {
+//   border: 1px solid fuchsia;
+  display: flex;
+  flex-direction: column;
+  
+  .product-card-name {
+//     border: 1px solid lime;
+    flex: 1 1 auto;
+  }
+  
+  .product-card-price {
+//     flex: 1;
+//     border: 1px solid blue;
+//     margin-top: auto;
   }
 }
